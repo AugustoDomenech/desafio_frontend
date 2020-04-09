@@ -2,7 +2,7 @@
 
 #Telas codificadas
 
-No front-end pelo tempo de trabalho foi mais implementado o layout e navegação da aplicação da aplicação. 
+No front-end pelo tempo de trabalho foi implementado o layout e navegação da aplicação da aplicação. 
 
 Login - implementado a busca na api, para validação do usuário
 ![GG](image/01.PNG)
