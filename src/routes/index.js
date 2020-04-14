@@ -15,7 +15,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={SingIn} />
-      <Route path="/register" component={SingUp} />
+      <Route path="/profileUser" component={Profile} />
 
       <Route path="/profile" component={Profile} />
       <Route path="/dashboard" component={Dashboard} />

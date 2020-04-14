@@ -18,7 +18,7 @@ export default function components() {
           <Profile>
             <div>
               <string>{Controller.User.name}</string>
-              <Link to="/profile">Meu perfil</Link>
+              <Link to="/profileUser">Meu perfil</Link>
             </div>
             <img
               src="https://api.adorable.io/avatars/50/abott@adorable.png"

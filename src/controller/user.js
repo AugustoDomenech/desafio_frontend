@@ -8,6 +8,7 @@ export const User = {
   password: "",
   type: 1,
   signed: false,
+  token: "",
 };
 
 export async function SingIn(data) {
@@ -20,6 +21,7 @@ export async function SingIn(data) {
     User.password = response.data.password;
     User.name = response.data.name;
     User.type = response.data.type;
+    User.token = response.data.token;
     User.signed = true;
 
     history.push("/dashboard");
@@ -32,5 +34,19 @@ export async function SingIn(data) {
     User.type = "";
     User.signed = false;
     history.push("/");
+  }
+}
+
+export async function Save(data) {
+  try {
+    const response = await api.post(`/user/save`, data, {
+      headers: [
+        { "Content-Type": "application/json" },
+        { "Access-Control-Allow-Origin": "*" },
+        { "Bearer ": User.token },
+      ],
+    });
+  } catch (err) {
+    alert("Usuário não registrado na base de dados.");
   }
 }
